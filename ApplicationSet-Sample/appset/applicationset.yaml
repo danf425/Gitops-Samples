@@ -25,7 +25,7 @@ spec:
           replicas: '{{replicas}}'
       destination:
         server: "https://kubernetes.default.svc"
-        namespace: "argocd" 
+        namespace: "danf-sandbox" 
       syncPolicy:
         automated:
           selfHeal: true
