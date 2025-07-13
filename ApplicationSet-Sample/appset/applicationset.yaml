@@ -5,7 +5,7 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/krishi0408/Gitops-Samples.git
+      repoURL: https://github.com/danf425/Gitops-Samples.git
       revision: main
       files:
       - path: ApplicationSet-Sample/cluster-config/*/config.json
@@ -18,7 +18,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/krishi0408/Gitops-Samples.git
+        repoURL: https://github.com/danf425/Gitops-Samples.git
         targetRevision: main
         path: ApplicationSet-Sample/apps/guestbook  
         kustomize:
