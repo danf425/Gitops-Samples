@@ -2,6 +2,6 @@
   "cluster_name": "se-sandbox",
   "environment": "prod1",
   "harness_service": "service_gitops_pr",
-  "replicas": "3",
+  "replicas": 3,
   "server_address": "https://35.231.43.35"
 }
