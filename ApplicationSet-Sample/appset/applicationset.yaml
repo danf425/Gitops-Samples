@@ -26,7 +26,7 @@ spec:
           - name: 'guestbook-{{environment}}'
             count: {{replicas}}
       destination:
-        server: "https://kubernetes.default.svc"
+        server: "https://35.231.43.35"
         namespace: "danf-sandbox" 
       syncPolicy:
         automated:
