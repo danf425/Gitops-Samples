@@ -22,9 +22,9 @@ spec:
         targetRevision: main
         path: ApplicationSet-Sample/apps/guestbook  
         kustomize:
-          replicas: 
-            - name: 'guestbook-{{environment}}'
-              count: {{replicas}}
+          replicas:
+          - name: 'guestbook-{{environment}}'
+            count: {{replicas}}
       destination:
         server: "https://kubernetes.default.svc"
         namespace: "danf-sandbox" 
@@ -35,4 +35,5 @@ spec:
         - PruneLast=true
         - ApplyOutOfSyncOnly=true
 
+        
         
