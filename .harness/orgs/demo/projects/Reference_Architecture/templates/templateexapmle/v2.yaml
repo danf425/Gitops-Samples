@@ -1,0 +1,39 @@
+template:
+  name: templateexapmle
+  type: StepGroup
+  projectIdentifier: Reference_Architecture
+  orgIdentifier: demo
+  spec:
+    steps:
+      - parallel:
+          - step:
+              type: Run
+              name: Install dependencies
+              identifier: Install_dependencies
+              spec:
+                shell: Sh
+                command: pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib gspread
+          - step:
+              type: Action
+              name: Setup Ruby
+              identifier: setup_ruby
+              spec:
+                uses: ruby/setup-ruby@v1.152.0
+                with:
+                  ruby-version: 3.2.2
+      - step:
+          type: Run
+          name: Install Dependencies
+          identifier: Run_1
+          spec:
+            shell: Sh
+            command: |-
+              sudo apt update
+              sudo apt -y install libarchive-tools
+        contextType: Pipeline
+    stageType: CI
+  tags:
+    owner: danf
+    iacmManaged: "false"
+  identifier: templateexapmle
+  versionLabel: v2
